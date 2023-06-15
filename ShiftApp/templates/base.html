@@ -1,13 +1,25 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block css %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-  {% block content %}
-  {% endblock %}
+    <div id="global-container">
+      <div id="container">
+        <header class="header">
+          <div class="header__inner">
+            {% block header %}{% endblock %}
+          </div>
+        </header>
+        <div id="content">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+    </div>
   </body>
 </html>
