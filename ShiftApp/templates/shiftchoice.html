@@ -4,13 +4,13 @@
 {% block css %}<link rel="stylesheet" href="{% static 'css\home.css' %}">{% endblock %}
 
 {% block title %}
-ログインページ
+シフト登録
 {% endblock %} 
 
 {% block content %}
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="ログイン">
+    <input type="submit" value="シフト送信">
 </form>
 {% endblock %}
