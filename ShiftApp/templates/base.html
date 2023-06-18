@@ -13,11 +13,13 @@
       <div id="container">
         <header class="header">
           <div class="header__inner">
-            <a class="header__items" href="{% url 'shiftcontrol:home' %}">ホーム画面</a>
+            
             {% if user.is_authenticated %}
+            <a class="header__items" href="{% url 'shiftcontrol:login_home' %}">シフト確認</a>
             <a class="header__items" href="{% url 'accounts:calendar' %}">シフト登録</a>
              <a class="header__items" href="{% url 'accounts:logout' %}">ログアウト</a>
             {% else %}
+            <a class="header__items" href="{% url 'shiftcontrol:home' %}">アプリイメージ</a>
             <a class="header__items" href="{% url 'accounts:login' %}">ログイン</a>
             <a class="header__items" href="{% url 'accounts:regist' %}">登録</a>
             {% endif %}

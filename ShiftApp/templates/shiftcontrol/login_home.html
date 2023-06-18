@@ -11,11 +11,18 @@
 {% endblock %} 
 
 {% block content %}
+<script>
+    {% autoescape off %}
+    var all_shift = "{{ all_shift }}";
+    {% endautoescape %}
+</script>
 <h1>カレンダー</h1>
 <div id="calendar"></div>
 {% endblock %}
 
 {% block js %}
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js"></script>
-<script src="{% static 'scheduleCalendar/app.js' %}"></script>
+<script src="{% static 'scheduleCalendar/login_home.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
 {% endblock %}

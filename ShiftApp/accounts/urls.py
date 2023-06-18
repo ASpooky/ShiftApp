@@ -9,4 +9,5 @@ urlpatterns=[
     path("shiftchoice/",views.ShiftChoiceView.as_view(),name="shiftchoice"),
     path("logout/",views.LogoutView.as_view(),name="logout"),
     path("calendar/",views.CalendarView.as_view(),name="calendar"),
+    path("calendar/<str:day>/",views.ShiftChoiceView.as_view(),name="shiftchoice"),
 ]
